@@ -1,0 +1,11 @@
+schema {
+  query: Query
+}
+
+scalar LocalDate
+
+type Query {
+  getAuthor(id: String): AuthorDto
+  getBook(id: String): BookDto
+  getBookCount : Int
+}

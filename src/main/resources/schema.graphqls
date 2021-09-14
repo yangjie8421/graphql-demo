@@ -1,0 +1,25 @@
+schema {
+  query: Query
+}
+
+scalar LocalDate
+
+type Query {
+  getAuthor(id: String): Author
+  getBook(id: String): Book
+}
+
+type Book {
+  bookId: String
+  bookName: String
+  authorId: String
+}
+
+type Author {
+  authorId: String
+  authorName: String
+  bookList:[Book]
+  birthday:LocalDate
+}
+
+
